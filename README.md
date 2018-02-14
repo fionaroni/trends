@@ -2,7 +2,7 @@
 
 This project develops a geographic visualization of twitter data across the United States
 
-<h1>Phase 1: The Feelings in Tweets
+<h1>Phase 1: The Feelings in Tweets<h1>
 
 Creates a data abstraction for Tweets, splits the text of a tweet into words, and calculates the amount of positive or negative feeling in a tweet.
 
@@ -27,7 +27,7 @@ The two representations created by **make_tweet** and **make_tweet_fn** do not n
 
 The **tweet_words** function combines the tweet_text selector and extract_words function from the previous questions to return a list of words in a tweet.
 
-#Phase 2: The Geometry of Maps
+<h1>Phase 2: The Geometry of Maps<h1>
 
 This phase implements two functions that together determine the centers of U.S. states. The shape of a state is represented as a list of polygons. Some states (e.g. Hawaii) consist of multiple polygons, but most states (e.g. Colorado) consist of only one polygon (represented as a length-one list of polygons).
 
@@ -39,7 +39,7 @@ The centroid of a two-dimensional shape is its center of balance, defined as the
 
 The centroid of a collection of polygons can be computed by geometric decomposition. The centroid of a shape is the weighted average of the centroids of its component polygons, weighted by their area.
 
-#Phase 3: The Mood of the Nation
+<h1>Phase 3: The Mood of the Nation<h1>
 
 In this phase, you will group tweets by their nearest state center and calculate the average positive or negative feeling in all the tweets associated with a state.
 
