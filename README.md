@@ -2,7 +2,7 @@
 
 This project develops a geographic visualization of twitter data across the United States
 
-#Phase 1: The Feelings in Tweets
+<h1>Phase 1: The Feelings in Tweets
 
 Creates a data abstraction for Tweets, splits the text of a tweet into words, and calculates the amount of positive or negative feeling in a tweet.
 
