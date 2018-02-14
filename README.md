@@ -2,7 +2,7 @@
 
 This project develops a geographic visualization of twitter data across the United States
 
-Phase 1: The Feelings in Tweets
+#Phase 1: The Feelings in Tweets
 
 Creates a data abstraction for Tweets, splits the text of a tweet into words, and calculates the amount of positive or negative feeling in a tweet.
 
@@ -17,7 +17,29 @@ Define a data abstraction for Tweets. To ensure that we do not violate abstracti
 
 (B) The alternate constructor make_tweet_fn returns a function that takes a string argument that is one of the keys above and returns the corresponding value.
 
-_Phase 3: The Mood of the Nation_
+The missing selector and constructor functions for these two representations: tweet_text, tweet_time, tweet_location correspond to representation (A); make_tweet_fn corresponds to representation (B).
+
+**tweet_location** returns a position. The constructors and selectors for this data abstraction can be found in geo.py.
+
+The two representations created by **make_tweet** and **make_tweet_fn** do not need to work together, but each constructor should work with its corresponding selectors.
+
+**analyze_tweet_sentiment** takes a tweet and returns a sentiment.
+
+The **tweet_words** function combines the tweet_text selector and extract_words function from the previous questions to return a list of words in a tweet.
+
+#Phase 2: The Geometry of Maps
+
+This phase implements two functions that together determine the centers of U.S. states. The shape of a state is represented as a list of polygons. Some states (e.g. Hawaii) consist of multiple polygons, but most states (e.g. Colorado) consist of only one polygon (represented as a length-one list of polygons).
+
+**find_centroid** takes a polygon and returns three values: the coordinates of its centroid and its area. The input polygon is represented as a list of position values that are consecutive vertices of its perimeter. The first vertex is always identical to the last.
+
+The centroid of a two-dimensional shape is its center of balance, defined as the intersection of all straight lines that evenly divide the shape into equal-area halves. The **find_centroid** function returns the centroid coordinates and area of an individual polygon.
+
+**find_state_center** takes a state represented by a list of polygons and returns a position, its centroid.
+
+The centroid of a collection of polygons can be computed by geometric decomposition. The centroid of a shape is the weighted average of the centroids of its component polygons, weighted by their area.
+
+#Phase 3: The Mood of the Nation
 
 In this phase, you will group tweets by their nearest state center and calculate the average positive or negative feeling in all the tweets associated with a state.
 
